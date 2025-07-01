@@ -136,26 +136,26 @@ const Landing = () => {
     <>
       <div className="min-h-screen h-screen w-screen flex flex-col md:flex-row overflow-hidden">
         {/* Left Section with Content */}
-        <div className="hidden md:flex w-full md:w-[65%] flex-col min-h-screen relative pt-4 px-2 xs:px-4 sm:px-6 lg:px-12 bg-gradient-to-br from-[#311188]/10 to-[#0A081E]/30 min-w-0 overflow-y-auto max-h-[50vh] md:max-h-none md:h-screen transition-all duration-500">
-          <div className="w-full flex flex-col flex-1 min-w-0">
+        <div className="hidden md:flex w-full md:w-[65%] flex-col h-full relative pt-2 px-2 xs:px-3 sm:px-6 lg:px-12 bg-gradient-to-br from-[#311188]/10 to-[#0A081E]/30 min-w-0 overflow-visible max-h-full transition-all duration-500">
+          <div className="w-full flex flex-col flex-1 min-w-0 justify-between h-full">
             {/* Title at the very top, minimal space above */}
             <div className="flex flex-col items-start">
               <div className="flex items-center gap-0 mb-1">
-                <span className="text-3xl xs:text-4xl lg:text-5xl xl:text-6xl font-bold bg-clip-text bg-gradient-to-r from-purple-300 via-pink-300 to-purple-400 font-spoof leading-none">Sign</span>
-                <img src={SignavoxLogo} alt="Signavox Logo" className="w-8 h-8 xs:w-10 xs:h-10 sm:w-6 sm:h-6 lg:w-10 lg:h-10 align-middle inline-block mt-3 xs:mt-4"/>
-                <span className="text-3xl xs:text-4xl lg:text-5xl xl:text-6xl font-bold bg-clip-text bg-gradient-to-r from-purple-300 via-pink-300 to-purple-400 font-spoof leading-none ">vox</span>
+                <span className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold bg-clip-text bg-gradient-to-r from-purple-300 via-pink-300 to-purple-400 font-spoof leading-none">Sign</span>
+                <img src={SignavoxLogo} alt="Signavox Logo" className="w-7 h-7 xs:w-8 xs:h-8 sm:w-10 sm:h-10 lg:w-10 lg:h-10 xl:w-11 xl:h-11 align-middle inline-block mt-2 xs:mt-3"/>
+                <span className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold bg-clip-text bg-gradient-to-r from-purple-300 via-pink-300 to-purple-400 font-spoof leading-none ">vox</span>
               </div>
             </div>
-            <p className="text-sm xs:text-base sm:text-lg md:text-xl text-purple-200 mt-2 font-spoof tracking-wide max-w-2xl mb-6">Empowering Future Tech Leaders</p>
+            <p className="text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl text-purple-200 mt-1 font-spoof tracking-wide max-w-2xl mb-4">Empowering Future Tech Leaders</p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="mt-2"
+              className="mt-1"
             >
               <motion.h2 
-                className="text-lg xs:text-xl md:text-4xl mb-6 text-purple-200 font-light tracking-wide font-spoof mt-5"
+                className="text-xs xs:text-sm sm:text-lg md:text-2xl lg:text-3xl mb-4 text-purple-200 font-light tracking-wide font-spoof mt-2"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
@@ -163,26 +163,26 @@ const Landing = () => {
                 "Solution that speaks success"
               </motion.h2>
               <motion.p 
-                className="text-xs xs:text-sm sm:text-base md:text-lg text-purple-100 mb-6 leading-relaxed  max-w-3xl font-spoof"
+                className="text-xs xs:text-sm sm:text-base md:text-lg text-purple-100 mb-4 leading-relaxed  max-w-3xl font-spoof"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
               >
                 This is not just our company — it's our legacy. Signavox stands for trust, transformation, and fearless journey into the future.
               </motion.p>
-              <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 md:gap-6 mt-8 mb-4 max-w-5xl w-full">
+              <div className="grid grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-3 md:gap-4 mt-12 mb-2 max-w-5xl w-full">
                 {features.map((feature, index) => (
                   <motion.div
                     key={index}
-                    className="bg-white/10 h-28 xs:h-32 min-h-[6rem] xs:min-h-[8rem] flex items-center p-3 xs:p-4 md:p-6 rounded-2xl backdrop-blur-lg transition-all border border-purple-500/30 group hover:bg-gradient-to-br hover:from-[#311188]/30 hover:to-[#0A081E]/40 hover:scale-105 hover:shadow-2xl relative overflow-hidden w-full min-w-0"
+                    className="bg-white/10 h-20 xs:h-24 min-h-[5rem] xs:min-h-[6rem] flex items-center p-2 xs:p-3 md:p-4 rounded-2xl backdrop-blur-lg transition-all border border-purple-500/30 group hover:bg-gradient-to-br hover:from-[#311188]/30 hover:to-[#0A081E]/40 hover:scale-105 hover:shadow-2xl relative overflow-hidden w-full min-w-0"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
                   >
-                    <span className="flex items-center justify-center w-10 h-10 xs:w-14 xs:h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br from-[#311188] via-purple-500 to-[#0A081E] shadow-xl group-hover:scale-110 transition-all duration-500 mr-2 xs:mr-4 relative before:absolute before:inset-0 before:bg-gradient-to-tr before:from-purple-400/20 before:via-transparent before:to-transparent before:rounded-2xl before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-500 after:absolute after:inset-[2px] after:rounded-xl after:bg-gradient-to-br after:from-[#311188]/90 after:via-purple-500/90 after:to-[#0A081E]/90">
-                      {React.cloneElement(feature.icon, { className: 'text-2xl xs:text-4xl md:text-5xl text-white drop-shadow-lg relative z-10 transform transition-transform duration-500' })}
+                    <span className="flex items-center justify-center w-8 h-8 xs:w-10 xs:h-10 md:w-12 md:h-12 rounded-2xl bg-gradient-to-br from-[#311188] via-purple-500 to-[#0A081E] shadow-xl group-hover:scale-110 transition-all duration-500 mr-2 xs:mr-3 relative before:absolute before:inset-0 before:bg-gradient-to-tr before:from-purple-400/20 before:via-transparent before:to-transparent before:rounded-2xl before:opacity-0 group-hover:before:opacity-100 before:transition-opacity before:duration-500 after:absolute after:inset-[2px] after:rounded-xl after:bg-gradient-to-br after:from-[#311188]/90 after:via-purple-500/90 after:to-[#0A081E]/90">
+                      {React.cloneElement(feature.icon, { className: 'text-lg xs:text-2xl md:text-3xl text-white drop-shadow-lg relative z-10 transform transition-transform duration-500' })}
                     </span>
-                    <p className="text-xs xs:text-base md:text-lg text-purple-100 group-hover:text-white font-spoof transition-colors duration-300 drop-shadow-md">
+                    <p className="text-xs xs:text-sm md:text-base text-purple-100 group-hover:text-white font-spoof transition-colors duration-300 drop-shadow-md">
                       {feature.title}
                     </p>
                   </motion.div>
@@ -191,12 +191,12 @@ const Landing = () => {
             </motion.div>
 
             {/* Footer Section always at the bottom */}
-            <div className="w-full mt-auto pt-8 pb-4 md:pb-6 px-2 md:px-6 text-xs md:text-sm text-purple-200/60 text-center md:text-left z-10">
-              <div className="flex flex-col md:flex-row items-center justify-between space-y-2 md:space-y-0">
+            <div className="w-full mt-auto pt-4 pb-2 md:pb-4 px-1 md:px-4 text-xs md:text-sm text-purple-200/60 text-center md:text-left z-10">
+              <div className="flex flex-col md:flex-row items-center justify-between space-y-1 md:space-y-0">
                 <Typography variant="body2" className="text-[#fff] text-xs font-spoof">
                   © 2025 Signavox. All rights Reserved
                 </Typography>
-                <div className="flex items-center space-x-2 xs:space-x-4">
+                <div className="flex items-center space-x-1 xs:space-x-2">
                   {copyrightLinks.map((link, index) => (
                     <React.Fragment key={index}>
                       {index !== 0 && (
@@ -212,7 +212,6 @@ const Landing = () => {
                             color: '#fff !important',
                             '&:hover': {
                               background: 'rgba(49, 17, 136, 0.1)',
-                              // transform: 'translateY(-2px)'
                             }
                           }}
                         >
