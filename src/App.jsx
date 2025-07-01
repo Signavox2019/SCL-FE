@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider, createTheme } from '@mui/material';
 import Layout from './components/Layout';
-import Landing from './pages/Landing';
+import Landing from './pages/RegistrationPage.jsx';
+import Login from './pages/Login.jsx';
 
 const theme = createTheme({
   palette: {
@@ -18,6 +19,7 @@ function App() {
         <Layout>
           <Routes>
             <Route path="/" element={<Landing />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </Layout>
       </Router>
